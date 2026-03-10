@@ -15,8 +15,4 @@
       shell: docker pull dualeochammuoi/game-cms-backend:latest
 
     - name: Run new container
-      shell: |
-        docker run -d \
-        --name game-cms\
-        -p 3334:3334 \
-        dualeochammuoi/game-cms-backend:latest
+      shell: docker run -d --name game-cms -p 3334:3334 dualeochammuoi/game-cms-backend:latest
