@@ -1,0 +1,6 @@
+- hosts: all
+  become: true
+  
+  tasks:
+    - name: test command
+      command: echo "Ansible working"
