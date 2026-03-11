@@ -1,0 +1,18 @@
+---
+- name: Deploy CMS Youtube
+  hosts: all
+  become: yes
+
+  tasks:
+
+    - name: Stop old container
+      shell: docker stop game-cms|| true
+
+    - name: Remove old container
+      shell: docker rm game-cms|| true
+
+    - name: Pull latest image
+      shell: docker pull dualeochammuoi/game-cms-backend:latest
+
+    - name: Run new container
+      shell: docker run -d --name game-cms -p 3334:3334 dualeochammuoi/game-cms-backend:latest

@@ -5,14 +5,11 @@
 
   tasks:
 
-    - name: Stop old container
-      shell: docker stop game-cms|| true
+    - name: Copy deploy script
+      copy:
+        src: cronj-ivds-update.dev.sh
+        dest: /opt/cronj-ivds-update.dev.sh
+        mode: '0755'
 
-    - name: Remove old container
-      shell: docker rm game-cms|| true
-
-    - name: Pull latest image
-      shell: docker pull dualeochammuoi/game-cms-backend:latest
-
-    - name: Run new container
-      shell: docker run -d --name game-cms -p 3334:3334 dualeochammuoi/game-cms-backend:latest
+    # - name: Run deploy
+    #   shell: /opt/cronj-ivds-update.dev.sh
