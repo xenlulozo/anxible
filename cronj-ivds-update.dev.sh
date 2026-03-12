@@ -7,10 +7,10 @@ HOST_IP=$(hostname -I | awk '{print $1}')
 echo "[$(date)] Detected host IP: $HOST_IP"
 
 # Images
-INVIDIOUS_IMAGE="quay.io/nthienquang199x/invidious:latest"
-COMPANION_IMAGE="quay.io/nthienquang199x/invidious-companion:latest"
-#INVIDIOUS_IMAGE="quay.io/invidious/invidious:2025.09.02-89c8b1b"
-#COMPANION_IMAGE="quay.io/invidious/invidious-companion:master-30d9ac0"
+#INVIDIOUS_IMAGE="quay.io/nthienquang199x/invidious:latest"
+#COMPANION_IMAGE="quay.io/nthienquang199x/invidious-companion:latest"
+INVIDIOUS_IMAGE="quay.io/invidious/invidious:master"
+COMPANION_IMAGE="quay.io/invidious/invidious-companion:latest"
 DB_IMAGE="docker.io/library/postgres:14"
 
 # Containers

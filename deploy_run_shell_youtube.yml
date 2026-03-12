@@ -1,0 +1,15 @@
+---
+- name: Deploy CMS Youtube
+  hosts: all
+  become: yes
+
+  tasks:
+
+    - name: Copy deploy script
+      copy:
+        src: cronj-ivds-update.dev.sh
+        dest: /opt/cronj-ivds-update.dev.sh
+        mode: '0755'
+
+    - name: Run deploy
+      shell: /opt/cronj-ivds-update.dev.sh
