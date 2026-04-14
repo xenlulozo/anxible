@@ -13,3 +13,7 @@
 
     - name: Run deploy
       shell: /opt/cronj-ivds-update.dev.sh
+
+    # - name: Show host result
+    #   debug:
+    #     msg: "Host {{ inventory_hostname }} finished"

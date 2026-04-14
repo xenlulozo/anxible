@@ -1,7 +1,7 @@
 ---
 - name: Deploy CMS Youtube
   hosts: all
-  become: yes
+  become: no
 
   tasks:
 
